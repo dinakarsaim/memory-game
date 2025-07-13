@@ -39,8 +39,11 @@ const App = () => {
 
   return (
     <div>
-      <h1>Don’t Click Twice</h1>
-      <p>Score: {score} | Best Score: {bestScore}</p>
+      <h1>Memory Card Shuffle</h1>
+      <div className="scoreboard">
+        <p>Score: {score}</p>
+        <p>Best Score: {bestScore}</p>
+      </div>
       <div className="container">
         {characters.map((char) => {
           return <Card key={char.id} charData = {char} onClick={()=> handleSelect(char.id)}/>
